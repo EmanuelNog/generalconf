@@ -1,0 +1,8 @@
+ctrl shift space    vi mode
+
+ctrl shift f        search forward
+ctrl shift b        search backwards
+/                   search in vi
+
+
+

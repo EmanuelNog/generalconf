@@ -1,4 +1,8 @@
+[window]
+dimensions = { columns = 120, lines = 30 }
+
 [terminal]
 [terminal.shell]
-program = "/usr/bin/tmux"
-args = ["new-session", "-A", "-s", "main"]
+program = "/home/nog/bin/tmux-window.sh"
+# program = "/usr/bin/tmux"
+# args = ["new-session", "-A", "-s", "main"]

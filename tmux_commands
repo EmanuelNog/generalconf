@@ -1,0 +1,75 @@
+4 Pane
+3 Window
+2 Session
+1 Client
+
+
+Programs run in terminals in panes, which each belong to one window.
+Each window has a name and one active pane.
+Windows are linked to one or more sessions.
+Each session has a list of windows, each with an index.
+One of the windows in a session is the current window.
+Sessions are attached to one or more clients, or are detached (attached to no clients).
+Each client is attached to one session.
+
+When a tmux client is attached, it shows a status line on the bottom line of the screen. By default this is green and shows:
+    On the left, the name of the attached session: [0] or [main]
+    In the middle, a list of the windows in the session, with their index, for example with one window called ksh at index 0: 0:ksh.
+    On the right, the pane title in quotes (this defaults to the name of the host running tmux) and the time and the date.
+
+-general-
+C-a            current leader
+leader leader  sends the leader commands to the running program
+leader ?       help
+leader >       Display pane menu
+leader <       Display window menu
+leader w       Choose a window from a list
+leader s       Choose a session from a list
+leader S       Create a new session with date-time name in new Alacritty window (exits when no client attached)
+leader :       Prompt for a command
+
+-client-
+leader d       Detach the current client
+
+-window-
+leader c       Create a new window
+leader &       Kill current window
+leader w       Choose a window from a list
+leader w x     Kill a window from a list
+leader 0       Select window 0
+leader '       Prompt for window index to select
+leader l       Select the previously current window
+leader n       Select the next window
+leader p       Select the previous window
+
+leader Space   Select next layout                                                     23:14 [67/2]
+leader "       Split window vertically
+leader %       Split window horizontally
+leader .       Move the current window
+
+-pane-
+leader o       Select the next pane
+leader ;       Move to the previously active pane
+leader x       Kill the active pane
+leader z       Zoom the active pane
+leader !       Break pane to a new window
+leader f       Search for a pane
+
+leader Up      Select the pane above the active pane
+leader Down    Select the pane below the active pane
+leader Left    Select the pane to the left of the active pane                          23:14 [7/2]
+leader Right   Select the pane to the right of the active pane
+
+leader {       Swap the active pane with the pane above
+leader }       Swap the active pane with the pane below
+leader E       Spread panes out evenly
+leader C-o     Rotate through the panes
+
+leader M-Up    Resize the pane up by 5
+leader M-Down  Resize the pane down by 5
+leader M-Left  Resize the pane left by 5
+leader M-Right Resize the pane right by 5
+leader C-Up    Resize the pane up
+leader C-Down  Resize the pane down
+leader C-Left  Resize the pane left
+leader C-Right Resize the pane right
